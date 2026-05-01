@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="zh-Hant">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="x-apple-disable-message-reformatting" />
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+  <meta name="color-scheme" content="light only" />
+  <meta name="supported-color-schemes" content="light only" />
+  <title>2026 年 5 月號 · 如何有效使用 GitHub Copilot</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+  <!--[if mso]>
+  <style type="text/css">
+    table, td, div, p, a { font-family: 'Microsoft JhengHei', '微軟正黑體', Arial, sans-serif !important; }
+    .mso-line-height { mso-line-height-rule: exactly; }
+  </style>
+  <![endif]-->
+  <style type="text/css">
+    /* Reset */
+    body, table, td, p, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; display: block; }
+    body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #f5f7fb; }
+    a { text-decoration: none; }
+
+    /* 行動裝置基本縮放，桌面 / Outlook 不受影響 */
+    @media only screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px-30 { padding-left: 20px !important; padding-right: 20px !important; }
+      .quote-cell { padding-left: 20px !important; padding-right: 20px !important; }
+      .body-cell { padding-left: 20px !important; padding-right: 20px !important; }
+      .body-cell p { font-size: 18px !important; line-height: 30px !important; }
+      .title-text { font-size: 26px !important; line-height: 36px !important; }
+      .cover-img { width: 100% !important; height: auto !important; }
+      .ai-img { width: 100% !important; height: auto !important; }
+      .header-issue { font-size: 11px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0; padding:0; background-color:#f5f7fb;">
+  <!-- Preheader：收件夾預覽文字（隱藏） -->
+  <div style="display:none; font-size:1px; color:#f5f7fb; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden;">
+    2026 年 5 月號 Issue 01 — 如何有效使用 GitHub Copilot，三個原則與實戰技巧。
+  </div>
+
+  <!-- 外層 wrapper：背景色 -->
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#f5f7fb;">
+    <tr>
+      <td align="center" style="padding:0;">
+
+        <!--[if mso | IE]>
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;"><tr><td>
+        <![endif]-->
+
+        <!-- 主容器 600px -->
+        <table role="presentation" class="container" border="0" cellpadding="0" cellspacing="0" width="600" style="width:600px; max-width:600px; background-color:#f5f7fb;">
+
+          <!-- Header -->
+          <tr>
+            <td bgcolor="#0b1020" style="background-color:#0b1020; padding:17px 24px;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="left" valign="middle" style="vertical-align:middle;">
+                    <img src="img/logo.png" alt="SAVITECH" width="100" height="18" style="display:block; width:100px; height:18px; border:0; outline:none;" />
+                  </td>
+                  <td align="right" valign="middle" class="header-issue" style="vertical-align:middle; font-family:'Noto Sans TC','Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:12px; line-height:16px; color:#e4e4e4; mso-line-height-rule:exactly;">
+                    2026 年 5 月號 &middot; Issue 01
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Cover photo -->
+          <tr>
+            <td bgcolor="#0b1020" style="background-color:#0b1020; line-height:0; font-size:0;">
+              <img src="img/cover.jpg" alt="" width="600" height="215" class="cover-img" style="display:block; width:600px; max-width:600px; height:auto; border:0; outline:none;" />
+            </td>
+          </tr>
+
+          <!-- Title -->
+          <tr>
+            <td class="px-30" style="padding:24px 30px; background-color:#f5f7fb;">
+              <p class="title-text mso-line-height" style="margin:0 0 10px 0; font-family:'Inter','Noto Sans TC','Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:32px; line-height:42px; font-weight:bold; color:#0b1020; letter-spacing:0.4px; mso-line-height-rule:exactly;">
+                如何有效使用 GitHub Copilot
+              </p>
+              <p style="margin:0; font-family:'Noto Sans TC','Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:14px; line-height:20px; color:#0b1020; font-weight:300; mso-line-height-rule:exactly;">
+                撰寫者：Henson
+              </p>
+            </td>
+          </tr>
+
+          <!-- Quote box（藍框引言） -->
+          <tr>
+            <td class="quote-cell" style="padding:0 26px 24px 26px; background-color:#f5f7fb;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #3b82f6; border-radius:10px; background-color:#f5f7fb;">
+                <tr>
+                  <td style="padding:24px 40px;">
+                    <p class="mso-line-height" style="margin:0; font-family:'Noto Sans TC','Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:16px; line-height:28px; color:#314158; letter-spacing:1px; mso-line-height-rule:exactly;">
+                      GitHub Copilot 不是替你思考，而是把你想清楚的事更快實現。把它當副駕駛，主導權在你手上；用清楚命名、註解與範例提供上下文，能顯著提升建議品質。再搭配 Chat 與 /explain、/tests、/fix 等指令，讓編輯器同時成為查詢與審查工具。三個原則與實戰技巧，幫你把 Copilot 變成穩定的生產力倍增器。
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- AI types image -->
+          <tr>
+            <td align="center" style="padding:24px 26px; background-color:#f5f7fb;">
+              <img src="img/ai-types.jpg" alt="3 Types of AI" width="548" height="308" class="ai-img" style="display:block; width:548px; max-width:548px; height:auto; border:0; outline:none;" />
+            </td>
+          </tr>
+
+          <!-- Body 三段內文 -->
+          <tr>
+            <td class="body-cell" style="padding:4px 25px 32px 26px; background-color:#f5f7fb;">
+              <p class="mso-line-height" style="margin:0 0 32px 0; font-family:'Noto Sans TC','Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:16px; line-height:28px; color:#314158; letter-spacing:1px; mso-line-height-rule:exactly;">
+                GitHub Copilot 不是替你思考，而是把你想清楚的事更快實現。把它當副駕駛，主導權在你手上；用清楚命名、註解與範例提供上下文，能顯著提升建議品質。再搭配 Chat 與 /explain、/tests、/fix 等指令，讓編輯器同時成為查詢與審查工具。三個原則與實戰技巧，幫你把 Copilot 變成穩定的生產力倍增器。
+              </p>
+              <p class="mso-line-height" style="margin:0 0 32px 0; font-family:'Noto Sans TC','Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:16px; line-height:28px; color:#314158; letter-spacing:1px; mso-line-height-rule:exactly;">
+                GitHub Copilot 不是替你思考，而是把你想清楚的事更快實現。把它當副駕駛，主導權在你手上；用清楚命名、註解與範例提供上下文，能顯著提升建議品質。再搭配 Chat 與 /explain、/tests、/fix 等指令，讓編輯器同時成為查詢與審查工具。三個原則與實戰技巧，幫你把 Copilot 變成穩定的生產力倍增器。
+              </p>
+              <p class="mso-line-height" style="margin:0; font-family:'Noto Sans TC','Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:16px; line-height:28px; color:#314158; letter-spacing:1px; mso-line-height-rule:exactly;">
+                GitHub Copilot 不是替你思考，而是把你想清楚的事更快實現。把它當副駕駛，主導權在你手上；用清楚命名、註解與範例提供上下文，能顯著提升建議品質。再搭配 Chat 與 /explain、/tests、/fix 等指令，讓編輯器同時成為查詢與審查工具。三個原則與實戰技巧，幫你把 Copilot 變成穩定的生產力倍增器。
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td bgcolor="#0b1020" align="center" style="background-color:#0b1020; padding:10px 20px; height:36px;">
+              <p class="mso-line-height" style="margin:0; font-family:'Lato','Microsoft JhengHei','微軟正黑體',Arial,sans-serif; font-size:12px; line-height:16px; color:#e4e4e4; letter-spacing:0.6px; mso-line-height-rule:exactly;">
+                &copy; 2026 by Savitech Corp. All Rights Reserved
+              </p>
+            </td>
+          </tr>
+
+        </table>
+
+        <!--[if mso | IE]>
+        </td></tr></table>
+        <![endif]-->
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
