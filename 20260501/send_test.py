@@ -30,7 +30,7 @@ SMTP_USER = os.environ.get("SMTP_USER")
 SMTP_PASS = os.environ.get("SMTP_PASS")
 MAIL_FROM = os.environ.get("MAIL_FROM", SMTP_USER)
 MAIL_TO = os.environ.get("TO")
-SUBJECT = os.environ.get("SUBJECT", "[測試] 2026 年 5 月號 · 如何有效使用 GitHub Copilot")
+SUBJECT = os.environ.get("SUBJECT", "Savitech 週刊｜2026 年 5 月號：如何有效使用 GitHub Copilot")
 
 
 def build_message() -> EmailMessage:
